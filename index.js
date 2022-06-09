@@ -13,7 +13,7 @@ const background = new Sprite({
         x: 0,
         y: 0
     },
-    imageSrc: './img/background/eric-_j-08211.jpg'
+    imageSrc: './img/background/newback1.png' 
 })
 
 
