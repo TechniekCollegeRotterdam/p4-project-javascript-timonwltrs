@@ -138,11 +138,11 @@ function animate() {
        player.switchSprite('run')
     } else if (keys.d.pressed && player.lastKey === 'd') {
         player.velocity.x = 5
-        player.image = player.sprites.run.image
+        player.switchSprite('run')
+    
     }
     if(player.velocity.y < 0){
-        player.image = player.sprites.jump.image
-        player.framesMax = player.sprites.jump.framesMax
+       player.switchSprite('jump')
     }
 
       // enemy movement
