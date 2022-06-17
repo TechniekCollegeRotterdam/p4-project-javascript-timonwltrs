@@ -15,13 +15,15 @@ class Sprite {
       
        
     }
-    draw()  {
+    draw(){
         c.drawImage(
             this.image,
             this.framesCurrent * (this.image.width / this.framesMax),
             0,
             this.image.width / this.framesMax,
             this.image.height,
+
+
 
                this.position.x - this.offset.x,
                this.position.y - this.offset.y,
@@ -93,7 +95,7 @@ class Fighter extends Sprite {
             sprites[sprite].image = new Image()
             sprites[sprite].image.src = sprites[sprite].imageSrc
         }
-        console.log(this.sprites)
+       
     }
     
 
@@ -116,32 +118,5 @@ class Fighter extends Sprite {
         setTimeout(() => {
          this.isAttacking = false   
         }, 100)
-    }
-    switchSprite(sprite){
-        switch (sprite){
-            case 'idle':
-                if(this.image !== this.sprites.idle.image){
-                this.image = this.sprites.idle.framesMax
-                this.framesMax = this.sprites.idle.framesMax
-                this.framesCurrent = 0
-            }
-            break
-            case 'run':
-                if(this.image !== this.sprites.run.image){
-                this.image = this.sprites.run.framesMax
-                this.framesMax = this.sprites.run.framesMax
-
-                this.framesCurrent = 0
-                }
-            break
-            case 'jump':
-                if (this.image !== this.sprites.jump.image) {
-                this.image = this.sprites.jump.image
-                this.framesMax = this.sprites.jump.framesMax
-                this.framesCurrent = 0
-            }
-            break
-
-        }
     }
 }

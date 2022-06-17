@@ -58,13 +58,7 @@ const player = new Fighter ({
        },
        run: {
         imageSrc: './img/Martial Hero/Sprites/Run.png',
-        framesMax: 8
-       
-    },
-    
-       jump: {
-        imageSrc: './img/Martial Hero/Sprites/Jump.png',
-        framesMax: 2
+        framesMax: 8,
        
     }
 
@@ -132,17 +126,13 @@ function animate() {
     enemy.velocity.x = 0
 
     // player movement
-    player.switchSprite('idle')
+       player.image = player.sprites.idle.image
     if (keys.a.pressed && player.lastKey === 'a') {
         player.velocity.x = -5
-       player.switchSprite('run')
+        player.image = player.sprites.run.image
     } else if (keys.d.pressed && player.lastKey === 'd') {
         player.velocity.x = 5
-        player.switchSprite('run')
-    
-    }
-    if(player.velocity.y < 0){
-       player.switchSprite('jump')
+        player.image = player.sprites.run.image
     }
 
       // enemy movement
