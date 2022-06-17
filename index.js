@@ -69,6 +69,10 @@ const player = new Fighter ({
     fall: {
         imageSrc: './img/Martial Hero/Sprites/Fall.png',
         framesMax: 2
+    },
+    attack1: {
+        imageSrc: './img/Martial Hero/Sprites/Attack1.png',
+        framesMax: 6
     }
 
    }
@@ -208,7 +212,7 @@ window.addEventListener('keydown', (event) => {
            player.velocity.y = -20
         break
         case ' ':
-          player.attack()
+          player.attack('')
            break
 
 
