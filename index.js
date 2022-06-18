@@ -212,7 +212,7 @@ window.addEventListener('keydown', (event) => {
            player.velocity.y = -20
         break
         case ' ':
-          player.attack('')
+          player.attack()
            break
 
 
