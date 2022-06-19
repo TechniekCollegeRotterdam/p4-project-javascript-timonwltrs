@@ -17,10 +17,10 @@ function determineWinner({player, enemy, timerId}) {
         
 
     }else if (player.health > enemy.health){
-        document.querySelector('#displayText').innerHTML = 'Player 1 Wins'
+        document.querySelector('#displayText').innerHTML = 'Kanye Wins'
 
     }else if (player.health < enemy.health){
-        document.querySelector('#displayText').innerHTML = 'Player 2 Wins'
+        document.querySelector('#displayText').innerHTML = 'Drake Wins'
         determineWinner({player, enemy})
 
     }
