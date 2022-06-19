@@ -317,6 +317,4 @@ window.addEventListener('keyup', (event) => {
             keys.ArrowUp.pressed = false
         break
     }
-  
-
 })

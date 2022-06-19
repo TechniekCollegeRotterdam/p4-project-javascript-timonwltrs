@@ -23,12 +23,10 @@ class Sprite {
             this.image.width / this.framesMax,
             this.image.height,
 
-
-
-               this.position.x - this.offset.x,
-               this.position.y - this.offset.y,
-              (this.image.width / this.framesMax) * this.scale,
-               this.image.height * this.scale)
+           this.position.x - this.offset.x,
+           this.position.y - this.offset.y,
+          (this.image.width / this.framesMax) * this.scale,
+          this.image.height * this.scale)
 
     }
 
@@ -105,12 +103,12 @@ class Fighter extends Sprite {
         this.animateFrames()
         
         this.attackBox.position.x = this.position.x + this.attackBox.offset.x
-        this.attackBox.position.y = this.position.y
+        this.attackBox.position.y = this.position.y 
 
-        c.fillRect(this.attackBox.position.y, this.attackBox.position.y, this.attackBox.width, this.attackBox.height)
+        c.fillRect(this.attackBox.position.x, this.attackBox.position.y, this.attackBox.width, this.attackBox.height)
 
         this.position.x += this.velocity.x
-        this.position.y += this.velocity.y
+        this.position.y += this.velocity.y 
 
         //gravity function
         if (this.position.y + this.height + this.velocity.y >= canvas.height - 65 ) {
