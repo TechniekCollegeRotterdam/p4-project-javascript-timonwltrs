@@ -78,8 +78,11 @@ const player = new Fighter ({
     takeHit: {
         imageSrc: './img/Martial Hero/Sprites/Take Hit - white silhouette.png',
         framesMax: 4
+    },
+    death: {
+        imageSrc: './img/Martial Hero/Sprites/Death.png',
+        framesMax: 6
     }
-
    },
    attackBox: {
     offset: {
@@ -139,6 +142,10 @@ const enemy = new Fighter ({
     takeHit: {
         imageSrc: './img/Martial Hero 2/Sprites/Take hit.png',
         framesMax: 3
+    },
+    death: {
+        imageSrc: './img/Martial Hero 2/Sprites/Death.png',
+        framesMax: 7
     }
 
    },
@@ -276,6 +283,9 @@ function animate() {
 animate()
 
 window.addEventListener('keydown', (event) => {
+    if (!player.dead){
+
+    
     
     switch (event.key) {
         case 'd':
@@ -292,9 +302,12 @@ window.addEventListener('keydown', (event) => {
         case ' ':
           player.attack()
            break
-
-
-
+        }
+    }
+    
+    if ( !enemy.dead){
+    switch(event.key){
+        
         case 'ArrowRight':
             keys.ArrowRight.pressed = true
             enemy.lastKey = 'ArrowRight'
@@ -312,7 +325,7 @@ window.addEventListener('keydown', (event) => {
          enemy.attack()
         break 
     }
-    
+ }
 
 })
 
