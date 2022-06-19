@@ -94,13 +94,41 @@ const enemy = new Fighter ({
     offset: {
         x: -50,
         y: 0
+    },
+    imageSrc: './img/Martial Hero/Sprites/Idle.png',
+   framesMax: 8,
+   scale: 2.5,
+   offset: {
+    x: 215,
+    y: 162
+   },
+   sprites: {
+       idle: {
+        imageSrc: './img/Martial Hero/Sprites/Idle.png',
+        framesMax: 8
+       },
+       run: {
+        imageSrc: './img/Martial Hero/Sprites/Run.png',
+        framesMax: 8,
+       
+    },
+    jump: {
+     imageSrc: './img/Martial Hero/Sprites/Jump.png',
+     framesMax: 2
+    
+ },
+    fall: {
+        imageSrc: './img/Martial Hero/Sprites/Fall.png',
+        framesMax: 2
+    },
+    attack1: {
+        imageSrc: './img/Martial Hero/Sprites/Attack1.png',
+        framesMax: 6
     }
+
+   }
  })
  
-
-
-
-console.log(player);
 
 const keys = {
     a: {
