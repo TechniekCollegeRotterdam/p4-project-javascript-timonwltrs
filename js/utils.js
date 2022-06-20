@@ -18,9 +18,12 @@ function determineWinner({player, enemy, timerId}) {
 
     }else if (player.health > enemy.health){
         document.querySelector('#displayText').innerHTML = 'Kanye Wins'
+        location.href = '/index.html'
+        
 
     }else if (player.health < enemy.health){
         document.querySelector('#displayText').innerHTML = 'Drake Wins'
+        location.href = '/index.html'
         determineWinner({player, enemy})
 
     }
@@ -37,7 +40,12 @@ function decreaseTimer(){
         document.querySelector('#timer').innerHTML = timer
     
     }
+
+
     if (timer === 0) {
         determineWinner({ player, enemy, timerId})
+  }
+  
+
 }
-}
+

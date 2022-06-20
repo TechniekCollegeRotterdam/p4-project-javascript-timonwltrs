@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+body {
+    background-image: url(img/decorations/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;  
+  
+  
+}
+
+.center-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 400px;
+}
+
+.button{
+    
+    background-color: #818df8ba;
+    color: white;
+    margin-top: 200px;
+    font-size: 30px;
+    height: 120px;
+    width: 350px;
+    border: none;
+    border-radius: 2%;
+    cursor: pointer;
+  
+}
+
+p{
+    text-align: center;
+    color: rgb(202, 83, 83);
+    margin-top: 10px;
+    font-size: 12px;
+}
