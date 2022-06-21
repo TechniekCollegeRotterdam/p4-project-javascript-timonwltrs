@@ -11,6 +11,11 @@
 
 SPEL UITLEG:
 
+In dit spel gaan Drake en Kanye West tegen elkaar vechten, het is de taak om je tegenstander uit te schakelen met je toetstenbord,
+terwijl je tegenstander naast je zit. 
+
+De knoppen gaan als volgt:
+
 Als je Kanye bent (links), dan gebruik je: 
 A: Beweging naar links
 Spatie: Slaan
