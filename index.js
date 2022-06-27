@@ -1,8 +1,10 @@
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
+const audio = new Audio("img/music/Kanye West - Gold Digger (Instrumental) (1).mp3")
 
 canvas.width = 1024
 canvas.height = 576
+
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
@@ -17,6 +19,7 @@ const background = new Sprite({
     },
     imageSrc: './img/background/ownbckgrnd.jpg' 
 })
+
 
 
 const shop = new Sprite({
@@ -170,13 +173,13 @@ const keys = {
     w: {
         pressed: false
     },
-    ArrowRight: {
+    l: {
         pressed: false
     },
-    ArrowLeft: {
+   j: {
         pressed: false
     },
-    ArrowUp: {
+   i: {
         pressed: false
     }
 }
@@ -188,6 +191,7 @@ function animate() {
     c.fillStyle = 'black'
     c.fillRect(0, 0, canvas.width, canvas.height)
     background.update()
+    
     shop.update()
     c.fillStyle = 'rgba( 255,255,255, 0.12)'
     c.fillRect(0,0, canvas.width, canvas.height)
@@ -217,10 +221,10 @@ function animate() {
     }
 
       // enemy movement
-      if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
+      if (keys.j.pressed && enemy.lastKey === 'j') {
         enemy.velocity.x = -5
         enemy.switchSprite('run')
-    } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
+    } else if (keys.l.pressed && enemy.lastKey === 'l') {
         enemy.velocity.x = 5
         enemy.switchSprite('run')
     } else {
@@ -292,7 +296,8 @@ animate()
 window.addEventListener('keydown', (event) => {
     if (!player.dead){
 
-    
+        audio.play();
+    //controls for player
     
     switch (event.key) {
         case 'd':
@@ -314,21 +319,21 @@ window.addEventListener('keydown', (event) => {
     
     if ( !enemy.dead){
     switch(event.key){
-        
-        case 'ArrowRight':
-            keys.ArrowRight.pressed = true
-            enemy.lastKey = 'ArrowRight'
+        // controls enemy
+        case 'l':
+            keys.l.pressed = true
+            enemy.lastKey = 'l'
         break
 
-        case 'ArrowLeft':
-           keys.ArrowLeft.pressed = true
-           enemy.lastKey = 'ArrowLeft'
+        case 'j':
+           keys.j.pressed = true
+           enemy.lastKey = 'j'
         break
 
-        case 'ArrowUp':
+        case 'i':
            enemy.velocity.y = -20
         break 
-        case 'ArrowDown':
+        case 'k':
          enemy.attack()
         break 
     }
@@ -352,14 +357,16 @@ window.addEventListener('keyup', (event) => {
 
     // enemy keys
     switch (event.key) {
-        case 'ArrowRight':
-            keys.ArrowRight.pressed = false
+        case 'l':
+            keys.l.pressed = false
         break
-        case 'ArrowLeft':
-            keys.ArrowLeft.pressed = false
+        case 'j':
+            keys.j.pressed = false
         break
-        case 'ArrowUp':
-            keys.ArrowUp.pressed = false
+        case 'i':
+            keys.i.pressed = false
         break
     }
 })
+
+//made by timon
